@@ -1,7 +1,8 @@
 CC = clang
-CFLAGS = -Wall -Wextra -Werror -Wpedantic -g -O2 $(shell pkg-config --cflags gmp)
-LFLAGS = $(shell pkg-config --libs gmp)
+CFLAGS = -Wall -Wextra -Werror -Wpedantic -g -O2 `pkg-config --cflags gmp`
+LFLAGS = `pkg-config --libs gmp`
 OBJS = gmp_rationalize.o
+RM = rm -f
 
 all: gmp_rationalize
 
